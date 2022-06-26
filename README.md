@@ -5,11 +5,11 @@ This script is make esx servers doesn't need a garage script no longer because t
 
 ## Setup
 
-run the sql file in your database.
-if you are using es_extended 1.1V goto config.lua and find `Config.esExtended1_1` variable and make it equel true.
+run the sql file in your database. <br/>
+if you are using es_extended 1.1V goto config.lua and find `Config.esExtended1_1` variable and make it equel true. <br/>
 (hardest part)goto your vehicleshop script and you must find the where player is purching the vehicle and paste this code in here `TriggerEvent('wiroVehicleSave:addVehicleClient', vehicle)`(vehicle variable is must be hash of the created vehicle).
 
 ## Last Words
-Don't forget to share issues that you find in the script so I can fix and make it better.
-If you have any issue or question you can make contact with me in github or discord.
+Don't forget to share issues that you find in the script so I can fix and make it better. <br/>
+If you have any issue or question you can make contact with me in github or discord. <br/>
 [My Discord Server](https://discord.gg/s5fWTrW)
