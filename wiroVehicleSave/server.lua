@@ -7,11 +7,15 @@ local isVehiclesDataExist = false
 local start = true
 local isItWorked = false
 
-local result = MySQL.Sync.fetchAll('SELECT * FROM owned_vehicles')
-for i = 1, #result do
-    vehicles[i] = {hash = nil, plate = result[i].plate, vehicle = json.decode(result[i].vehicle) , coords = json.decode(result[i].coords), created = false}
-end
-isVehiclesDataExist = true
+AddEventHandler('onResourceStart', function(resourceName)
+    if ("wiroVehicleSave" == resourceName) then
+	local result = MySQL.Sync.fetchAll('SELECT * FROM owned_vehicles')
+	for i = 1, #result do
+   	 vehicles[i] = {hash = nil, plate = result[i].plate, vehicle = json.decode(result[i].vehicle) , coords = json.decode(result[i].coords), created = false}
+	end
+	isVehiclesDataExist = true
+    end
+end)
 
 AddEventHandler('esx:playerLoaded',function(source)
     Citizen.Wait(5000)
